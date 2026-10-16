@@ -7,7 +7,7 @@ Data (keys, TTL, durability) also lives in MSMQ queues. It is *not* a Redis clon
 ```mermaid
 flowchart LR
     subgraph Clients
-        A[Any OS: mcache-cli / MsmqCache.Client] -->|TCP :6390| T
+        A[Any OS: mcache-cli / MsmqCache.Client / SDK] -->|TCP :6390| T
         B[Windows: VBScript / AHK / PowerShell / VB6<br/>ProgID MsmqCache.Client] -->|COM -> MSMQ send| I
     end
     subgraph Windows server
@@ -21,10 +21,10 @@ flowchart LR
     R --> B
 ```
 
-[![Architecture](https://raw.githubusercontent.com/cumulus13/msmq-cache/master/architecture.jpg)](https://github.com/cumulus13/msmq-cache)
+[![Architecture 1](https://files.catbox.moe/06j9zb.jpg)](https://files.catbox.moe/06j9zb.jpg)
 
 
-[![Architecture](https://raw.githubusercontent.com/cumulus13/msmq-cache/master/architecture1.jpg)](https://github.com/cumulus13/msmq-cache)
+[![Architecture 2](https://files.catbox.moe/o6ztj4.jpg)](https://files.catbox.moe/o6ztj4.jpg)
 
 * Server: Windows only (MSMQ). Clients: TCP from any OS; COM from Windows.
 * Docs: `docs/` (Markdown; export to PDF/DOCX/HTML with `docs/build-docs.ps1` or `docs/build-docs.sh`).

@@ -13,6 +13,30 @@ MsmqCache is a networked cache and work-queue server in which **MSMQ is the engi
 | Back-pressure, quota | MSMQ queue quota (`max-queue-kb`) |
 | Access control | MSMQ queue ACLs (COM / remote MSMQ), `requirepass` (TCP) |
 
+
+```mermaid
+flowchart LR
+    subgraph Clients
+        A[Any OS: mcache-cli / MsmqCache.Client / SDK] -->|TCP :6390| T
+        B[Windows: VBScript / AHK / PowerShell / VB6<br/>ProgID MsmqCache.Client] -->|COM -> MSMQ send| I
+    end
+    subgraph Windows server
+        T[TCP gateway] -->|command = MSMQ message| I[(ingress queue)]
+        I --> E[Engine - single consumer]
+        E <--> D[(data queue: 1 message per key,<br/>TTL = TimeToBeReceived)]
+        E <--> W[(work queues QPUSH/QPOP,<br/>priority, TTL)]
+        E -->|reply = MSMQ message<br/>CorrelationId| R[(reply queues)]
+        R --> T
+    end
+    R --> B
+```
+
+[![Architecture 1](https://files.catbox.moe/06j9zb.jpg)](https://files.catbox.moe/06j9zb.jpg)
+
+
+[![Architecture 2](https://files.catbox.moe/o6ztj4.jpg)](https://files.catbox.moe/o6ztj4.jpg)
+
+
 ## Two ingress paths, one queue
 * **TCP**: `mcache-server` listens on a port. The gateway never touches the cache; it wraps each command into an MSMQ message.
 * **COM**: the in-process automation object `MsmqCache.Client` sends the same message directly to the ingress queue. There is no separate COM server process; the *queue* is the COM entry point. Works locally or against a remote server's queue via MSMQ.
