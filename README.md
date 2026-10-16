@@ -7,16 +7,16 @@ Data (keys, TTL, durability) also lives in MSMQ queues. It is *not* a Redis clon
 ```mermaid
 flowchart LR
     subgraph Clients
-      A[Any OS: mcache-cli / MsmqCache.Client] -->|TCP :6390| T
-      B[Windows: VBScript / AHK / PowerShell / VB6<br/>ProgID MsmqCache.Client] -->|COM -> MSMQ send| I
+        A[Any OS: mcache-cli / MsmqCache.Client] -->|TCP :6390| T
+        B[Windows: VBScript / AHK / PowerShell / VB6<br/>ProgID MsmqCache.Client] -->|COM -> MSMQ send| I
     end
     subgraph Windows server
-      T[TCP gateway] -->|command = MSMQ message| I[(ingress queue)]
-      I --> E[Engine - single consumer]
-      E <--> D[(data queue: 1 message per key,<br/>TTL = TimeToBeReceived)]
-      E <--> W[(work queues QPUSH/QPOP,<br/>priority, TTL)]
-      E -->|reply = MSMQ message<br/>CorrelationId| R[(reply queues)]
-      R --> T
+        T[TCP gateway] -->|command = MSMQ message| I[(ingress queue)]
+        I --> E[Engine - single consumer]
+        E <--> D[(data queue: 1 message per key,<br/>TTL = TimeToBeReceived)]
+        E <--> W[(work queues QPUSH/QPOP,<br/>priority, TTL)]
+        E -->|reply = MSMQ message<br/>CorrelationId| R[(reply queues)]
+        R --> T
     end
     R --> B
 ```
