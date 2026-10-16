@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/tests/test_client.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: 
+# License: MIT
+
 import asyncio
 import os
 import sys

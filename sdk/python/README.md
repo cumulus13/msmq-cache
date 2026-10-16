@@ -48,3 +48,14 @@ asyncio.run(main())
 ## Tests
 `python -m unittest discover -s sdk/python/tests` runs against an in-process fake server that reproduces the wire format
 (framing, nil/error replies, auth). It does **not** exercise a real mcache-server or MSMQ.
+
+## 👤 Author
+        
+[Hadi Cahyadi](mailto:cumulus13@gmail.com)
+    
+
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/cumulus13)
+
+[![Donate via Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cumulus13)
+ 
+[Support me on Patreon](https://www.patreon.com/cumulus13)

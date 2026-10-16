@@ -1,5 +1,14 @@
+// File: src\MsmqCache.Server\WorkQueues.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: Native MSMQ work queues exposed as QPUSH/QPOP/...: one real MSMQ private queue per
+//              logical queue (non-transactional so MSMQ message priority works; transactional queues
+//              ignore priority).
+// License: MIT
+
 // Native MSMQ work queues exposed as QPUSH/QPOP/...: one real MSMQ private queue per logical queue
 // (non-transactional so MSMQ message priority works; transactional queues ignore priority).
+
 using System;
 using System.Collections.Generic;
 using System.IO;

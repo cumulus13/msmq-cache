@@ -1,5 +1,14 @@
+// File: src\MsmqCache.Com\CacheClient.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: COM automation object: ProgID "MsmqCache.Client". Talks to the server through MSMQ 
+//              (no TCP involved): every call becomes a message in the server's ingress queue; 
+//              the reply is collected from a local reply queue.
+// License: MIT
+
 // COM automation object: ProgID "MsmqCache.Client". Talks to the server through MSMQ (no TCP involved):
 // every call becomes a message in the server's ingress queue; the reply is collected from a local reply queue.
+
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;

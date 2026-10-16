@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/src/msmqcache/errors.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: msmq-cache - Exceptions raised by the msmqcache client.
+# License: MIT
+
 """Exceptions raised by the msmqcache client."""
 
 

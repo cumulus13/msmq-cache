@@ -1,4 +1,11 @@
+// File: src\MsmqCache.Cli\Program.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: command line client for msmq-cache
+// License: MIT
+
 // mcache-cli - command line client (any OS). Usage: mcache-cli [-h host] [-p port] [-a password] [command args...]
+
 using System;
 using System.Threading.Tasks;
 using MsmqCache.Client;

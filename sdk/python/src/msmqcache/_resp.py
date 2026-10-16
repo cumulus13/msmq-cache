@@ -1,4 +1,13 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/src/msmqcache/_resp.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: msmq-cache - RESP encoding/decoding shared by the sync and asyncio clients (stdlib only).
+# License: MIT
+
 """RESP encoding/decoding shared by the sync and asyncio clients (stdlib only)."""
+
 from __future__ import annotations
 
 from typing import Any, Iterable, List, Optional

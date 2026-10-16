@@ -1,4 +1,11 @@
+// File: src\MsmqCache.Server\Program.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: mcache-server - MSMQ-backed cache server. Console when run interactively, Windows Service otherwise.
+// License: MIT
+
 // mcache-server - MSMQ-backed cache server. Console when run interactively, Windows Service otherwise.
+
 using System;
 using System.IO;
 using System.ServiceProcess;

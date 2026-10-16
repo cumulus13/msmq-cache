@@ -1,4 +1,13 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/tests/fake_server.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: msmq-cache - Tiny in-process RESP server that mimics mcache-server's wire behaviour (NOT its MSMQ storage).
+# License: MIT
+
 """Tiny in-process RESP server that mimics mcache-server's wire behaviour (NOT its MSMQ storage)."""
+
 import fnmatch
 import socketserver
 import threading

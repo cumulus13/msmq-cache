@@ -1,3 +1,9 @@
+// File: tests\MsmqCache.Tests\CoreTests.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: 
+// License: MIT
+
 using System.Linq;
 using System.Text;
 using MsmqCache.Core;

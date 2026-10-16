@@ -1,5 +1,14 @@
+// File: src\MsmqCache.Server\TcpGateway.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: TCP front door. It does NOT touch the cache: each client command is wrapped into an MSMQ
+//              message and sent to the ingress queue; the reply comes back through a reply queue and is
+//              written to the socket.
+// License: MIT
+
 // TCP front door. It does NOT touch the cache: each client command is wrapped into an MSMQ message and sent
 // to the ingress queue; the reply comes back through a reply queue and is written to the socket.
+
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;

@@ -1,4 +1,11 @@
+// File: src\MsmqCache.Core\ServerConfig.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: MsmqCache.Core - redis-style configuration file ("directive value" per line, '#' comments).
+// License: MIT
+
 // MsmqCache.Core - redis-style configuration file ("directive value" per line, '#' comments).
+
 using System;
 using System.Collections.Generic;
 using System.Globalization;

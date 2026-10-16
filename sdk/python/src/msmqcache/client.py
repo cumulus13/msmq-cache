@@ -1,4 +1,13 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/src/msmqcache/client.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: msmq-cache - Blocking client and pipeline.
+# License: MIT
+
 """Blocking client and pipeline."""
+
 from __future__ import annotations
 
 import socket

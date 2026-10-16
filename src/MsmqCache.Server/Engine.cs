@@ -1,4 +1,11 @@
+// File: src\MsmqCache.Server\Engine.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: The single consumer of the ingress queue. Every command - from TCP or COM - arrives here as an MSMQ message.
+// License: MIT
+
 // The single consumer of the ingress queue. Every command - from TCP or COM - arrives here as an MSMQ message.
+
 using System;
 using System.IO;
 using System.Messaging;

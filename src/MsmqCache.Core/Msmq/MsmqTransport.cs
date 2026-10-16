@@ -1,5 +1,14 @@
+// File: src\MsmqCache.Core\Msmq\MsmqTransport.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: MsmqCache.Core (net48 only) - shared MSMQ helpers: queue creation and a synchronous
+//              request/reply requester used by the COM component. The server's TCP gateway uses 
+//              the same message format.
+// License: MIT
+
 // MsmqCache.Core (net48 only) - shared MSMQ helpers: queue creation and a synchronous request/reply requester
 // used by the COM component. The server's TCP gateway uses the same message format.
+
 using System;
 using System.Collections.Generic;
 using System.IO;

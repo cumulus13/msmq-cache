@@ -1,8 +1,20 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/src/msmqcache/commands.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: msmq-cache -- Command set, written once and shared by Client, AsyncClient and Pipeline.
+#              Every method builds the argument list and hands it to ``self._call(args, callback)``:
+#              Client executes it and returns the value, AsyncClient returns a coroutine, Pipeline 
+#              queues it.
+# License: MIT
+
 """Command set, written once and shared by Client, AsyncClient and Pipeline.
 
 Every method builds the argument list and hands it to ``self._call(args, callback)``:
 Client executes it and returns the value, AsyncClient returns a coroutine, Pipeline queues it.
 """
+
 from __future__ import annotations
 
 from datetime import timedelta

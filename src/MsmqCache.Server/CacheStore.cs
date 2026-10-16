@@ -1,9 +1,16 @@
+// File: src\MsmqCache.Server\CacheStore.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: 
+// License: MIT
+
 // Key/value cache whose DATA lives in an MSMQ transactional queue:
 //   one message per key  -> Body = value, Extension = [expireTicks(8) + key UTF-8], Label = key (truncated)
 //   TTL                  -> MSMQ TimeToBeReceived (MSMQ itself drops the message when it expires)
 //   durability           -> transactional queue (always disk backed)
 //   SET                  -> one MSMQ transaction: send new message + receive (remove) the old one
 // An in-memory index key -> LookupId is rebuilt from the queue at startup. Only the single processor thread touches it.
+
 using System;
 using System.Collections.Generic;
 using System.IO;

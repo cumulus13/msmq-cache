@@ -5,6 +5,18 @@
     <AssemblyName>mcache-server</AssemblyName>
     <RootNamespace>MsmqCache.Server</RootNamespace>
     <Platforms>AnyCPU</Platforms>
+    <Copyright>Copyright © 2026 Hadi Cahyadi</Copyright>
+    <Authors>Hadi Cahyadi</Authors>
+    <Company>cumulus13</Company>
+    <RepositoryBranch>master</RepositoryBranch>
+    <PackageId>MSMQCache-server</PackageId>
+    <Product>MSMQCache Server</Product>
+    <Version>1.0.0</Version>
+    <PackageTags>msmq-cache server</PackageTags>
+    <PackageProjectUrl>https://github.com/cumulus13/msmq-cache</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cumulus13/msmq-cache</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Messaging" />

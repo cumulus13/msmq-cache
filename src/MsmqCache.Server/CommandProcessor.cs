@@ -1,3 +1,9 @@
+// File: src\MsmqCache.Server\CommandProcessor.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: 
+// License: MIT
+
 using System;
 using System.Collections.Generic;
 using System.Messaging;

@@ -1,4 +1,13 @@
+#!/usr/bin/env python3
+
+# File: sdk/python/src/msmqcache/aio.py
+# Author: Hadi Cahyadi <cumulus13@gmail.com>
+# Date: 2026-10-17
+# Description: msmq-cache - asyncio client (same command set; every command method returns an awaitable).
+# License: MIT
+
 """asyncio client (same command set; every command method returns an awaitable)."""
+
 from __future__ import annotations
 
 import asyncio

@@ -1,4 +1,12 @@
+// File: src\MsmqCache.Core\Resp.cs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-10-17
+// Description: MsmqCache.Core - RESP-style wire/queue protocol (the SAME bytes travel over TCP and
+//              inside MSMQ message bodies).
+// License: MIT
+
 // MsmqCache.Core - RESP-style wire/queue protocol (the SAME bytes travel over TCP and inside MSMQ message bodies).
+
 using System;
 using System.Collections.Generic;
 using System.IO;
