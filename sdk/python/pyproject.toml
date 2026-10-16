@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msmqcache"
+version = "1.0.0"
+description = "Python client (sync + asyncio) for mcache-server, the MSMQ-backed cache/queue server"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Hadi Cahyadi", email = "cumulus13@gmail.com" }]
+keywords = ["msmq", "cache", "queue", "client", "resp"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/cumulus13/msmq-cache"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+msmqcache = ["py.typed"]

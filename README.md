@@ -21,6 +21,11 @@ flowchart LR
     R --> B
 ```
 
+[![Architecture](https://raw.githubusercontent.com/cumulus13/msmq-cache/master/architecture.png)](https://github.com/cumulus13/msmq-cache)
+
+
+[![Architecture](https://raw.githubusercontent.com/cumulus13/msmq-cache/master/architecture1.png)](https://github.com/cumulus13/msmq-cache)
+
 * Server: Windows only (MSMQ). Clients: TCP from any OS; COM from Windows.
 * Docs: `docs/` (Markdown; export to PDF/DOCX/HTML with `docs/build-docs.ps1` or `docs/build-docs.sh`).
 * **Read `docs/07-limitations.md` before production use.**

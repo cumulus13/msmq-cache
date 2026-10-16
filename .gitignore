@@ -25,3 +25,6 @@ __pycache__/
 # Added entries (2 items)
 *sublime*
 *.patch
+
+# Added entries (1 items)
+downloads/
