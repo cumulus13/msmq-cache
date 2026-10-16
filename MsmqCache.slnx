@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MsmqCache.Core/MsmqCache.Core.csproj" />
+    <Project Path="src/MsmqCache.Server/MsmqCache.Server.csproj" />
+    <Project Path="src/MsmqCache.Com/MsmqCache.Com.csproj" />
+    <Project Path="src/MsmqCache.Client/MsmqCache.Client.csproj" />
+    <Project Path="src/MsmqCache.Cli/MsmqCache.Cli.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MsmqCache.Tests/MsmqCache.Tests.csproj" />
+  </Folder>
+</Solution>

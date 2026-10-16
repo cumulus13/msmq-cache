@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
+    <RootNamespace>MsmqCache.Core</RootNamespace>
+  </PropertyGroup>
+  <!-- MSMQ helpers exist only for .NET Framework (System.Messaging is in-box there). -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Include="System.Messaging" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'net48'">
+    <Compile Remove="Msmq\**" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+# Created by https://www.toptal.com/developers/gitignore/api/dotnet
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotnet
+
+#!! ERROR: dotnet is undefined. Use list command to see defined gitignore types !!#
+
+# End of https://www.toptal.com/developers/gitignore/api/dotnet
+*.pyc
+*.bak
+*.zip
+*.rar
+*.7z
+*.mp3
+*.wav
+*.sublime-workspace
+.hg/
+build/
+*.hgignore
+*.hgtags
+*dist/
+*.egg-info/
+traceback.log
+__pycache__/
+*.log
+
+# Added entries (2 items)
+*sublime*
+*.patch

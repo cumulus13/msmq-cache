@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>mcache-server</AssemblyName>
+    <RootNamespace>MsmqCache.Server</RootNamespace>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <ProjectReference Include="..\MsmqCache.Core\MsmqCache.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\conf\mcache.conf" Link="mcache.conf" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

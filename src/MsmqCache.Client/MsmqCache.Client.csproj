@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>MsmqCache.Client</AssemblyName>
+    <RootNamespace>MsmqCache.Client</RootNamespace>
+    <PackageId>MsmqCache.Client</PackageId>
+    <Description>TCP client for mcache-server (MSMQ-backed cache). Runs on any OS.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MsmqCache.Core\MsmqCache.Core.csproj" />
+  </ItemGroup>
+</Project>

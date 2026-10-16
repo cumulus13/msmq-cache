@@ -1,0 +1,38 @@
+name: ci
+on:
+  push: { branches: [master] }
+  pull_request:
+jobs:
+  build-test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '9.0.x' }
+      - run: dotnet restore MsmqCache.slnx
+      - run: dotnet build MsmqCache.slnx -c Release --no-restore
+      - run: dotnet test tests/MsmqCache.Tests -c Release --no-build
+  smoke-msmq:
+    # Needs the MSMQ Windows feature on the hosted runner; unverified, so failures do not block merges yet.
+    needs: build-test
+    runs-on: windows-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '9.0.x' }
+      - name: Enable MSMQ
+        shell: pwsh
+        run: |
+          Enable-WindowsOptionalFeature -Online -FeatureName MSMQ-Server -All -NoRestart
+          Start-Service MSMQ
+          Get-Service MSMQ
+      - name: Publish
+        shell: pwsh
+        run: |
+          dotnet build src/MsmqCache.Server -c Release -o dist/server
+          dotnet build src/MsmqCache.Com -c Release -o dist/com
+          dotnet publish src/MsmqCache.Cli -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o dist/cli
+      - name: Smoke test
+        shell: pwsh
+        run: ./scripts/smoke.ps1

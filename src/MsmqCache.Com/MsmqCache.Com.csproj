@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>MsmqCache.Com</AssemblyName>
+    <RootNamespace>MsmqCache.Com</RootNamespace>
+    <ComVisible>false</ComVisible>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Messaging" />
+    <ProjectReference Include="..\MsmqCache.Core\MsmqCache.Core.csproj" />
+  </ItemGroup>
+</Project>
