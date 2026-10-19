@@ -1,0 +1,20 @@
+{
+  "name": "msmqcache",
+  "version": "1.0.0",
+  "description": "Node.js / TypeScript client for mcache-server (MSMQ-backed cache and queue server). Zero runtime dependencies.",
+  "license": "MIT",
+  "author": "Hadi Cahyadi <cumulus13@gmail.com>",
+  "repository": { "type": "git", "url": "https://github.com/cumulus13/msmq-cache.git", "directory": "sdk/node" },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": ["dist/src", "README.md"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "npm run build && node --test dist/test/conformance.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "cumulus13/msmqcache",
+  "description": "PHP client for mcache-server (MSMQ-backed cache and queue server). No dependencies.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [{ "name": "Hadi Cahyadi", "email": "cumulus13@gmail.com" }],
+  "require": { "php": ">=8.1" },
+  "autoload": {
+    "psr-4": { "Cumulus13\\MsmqCache\\": "src/" },
+    "files": ["src/Exceptions.php"]
+  }
+}

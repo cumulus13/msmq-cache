@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOT BUILT: no Maven was available when this file was written. The sources compile with plain javac (see run-tests.sh). -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cumulus13</groupId>
+  <artifactId>msmqcache</artifactId>
+  <version>1.0.0</version>
+  <name>msmqcache</name>
+  <description>Java client for mcache-server (MSMQ-backed cache and queue server). No dependencies.</description>
+  <url>https://github.com/cumulus13/msmq-cache</url>
+  <licenses><license><name>MIT</name><url>https://opensource.org/licenses/MIT</url></license></licenses>
+  <properties>
+    <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>

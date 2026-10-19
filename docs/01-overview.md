@@ -38,7 +38,7 @@ flowchart LR
 
 
 ## Two ingress paths, one queue
-* **TCP**: `mcache-server` listens on a port. The gateway never touches the cache; it wraps each command into an MSMQ message.
+* **TCP**: `msmq-cache-server` listens on a port. The gateway never touches the cache; it wraps each command into an MSMQ message.
 * **COM**: the in-process automation object `MsmqCache.Client` sends the same message directly to the ingress queue. There is no separate COM server process; the *queue* is the COM entry point. Works locally or against a remote server's queue via MSMQ.
 
 Both paths produce byte-identical messages (RESP-encoded command in the body), so the engine cannot tell them apart.

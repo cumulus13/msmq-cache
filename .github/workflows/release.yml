@@ -20,7 +20,7 @@ jobs:
           Copy-Item conf/mcache.conf stage/server/ -Force
           Compress-Archive -Path stage/server/*, stage/com -DestinationPath mcache-server-windows.zip
       - uses: actions/upload-artifact@v4
-        with: { name: server, path: mcache-server-windows.zip }
+        with: { name: server, path: msmq-cache-server-windows.zip }
   cli:
     strategy:
       matrix:

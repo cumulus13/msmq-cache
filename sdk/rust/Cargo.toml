@@ -1,0 +1,11 @@
+[package]
+name = "msmqcache"
+version = "1.0.0"
+edition = "2021"
+description = "Blocking client for mcache-server (MSMQ-backed cache and queue server). Zero dependencies."
+license = "MIT"
+authors = ["Hadi Cahyadi <cumulus13@gmail.com>"]
+repository = "https://github.com/cumulus13/msmq-cache"
+readme = "README.md"
+
+[dependencies]
